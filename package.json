@@ -1,0 +1,30 @@
+{
+  "name": "turmag-eslint-config",
+  "main": "index.js",
+  "version": "1.0.0",
+  "description": "turmag's reusable eslint-config",
+  "author": "Pavel Vinogradov",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "config",
+    "example"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "repository": "https://github.com/Turmag/turmag-eslint-config.git",
+  "homepage": "https://github.com/Turmag/turmag-eslint-config",
+  "dependencies": {
+    "@babel/core": "7.18.9",
+    "@babel/eslint-parser": "7.18.9",
+    "@babel/eslint-plugin": "7.16.5",
+    "eslint": "8.7.0",
+    "eslint-import-resolver-webpack": "0.13.2",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jest": "26.0.0",
+    "eslint-plugin-jest-dom": "4.0.1",
+    "eslint-plugin-optimize-regex": "1.2.1",
+    "eslint-plugin-sonarjs": "0.11.0"
+  }
+}
