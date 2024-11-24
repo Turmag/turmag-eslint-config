@@ -2,12 +2,9 @@ import globals from 'globals';
 import eslint from '@eslint/js';
 import vueLint from 'eslint-plugin-vue';
 import stylistic from '@stylistic/eslint-plugin';
-import local from 'eslint-plugin-local';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-    { plugins: { local } },
-
     // config parsers
     {
         files: ['*.vue', '**/*.vue', '*.ts', '**/*.ts'],
@@ -36,7 +33,7 @@ export default tseslint.config(
     eslint.configs.recommended,
     ...tseslint.configs.recommendedTypeChecked,
     ...vueLint.configs['flat/recommended'],
-    
+
     // code style rules
     stylistic.configs['disable-legacy'],
     stylistic.configs.customize({
@@ -98,11 +95,6 @@ export default tseslint.config(
                 'error',
                 { checksVoidReturn: false },
             ],
-            'local/prefer-true-attribute-shorthand': ['error', 'always'],
-            'local/add-vue-extension': 'error',
-            'local/use-shortest-alias': 'error',
-            'local/import-entities-by-column-or-line': ['error', { minProperties: 3 }],
-            'local/import-right-order': 'off',
         },
     },
 

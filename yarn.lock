@@ -120,13 +120,6 @@
     estraverse "^5.3.0"
     picomatch "^4.0.2"
 
-"@thisismanta/pessimist@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@thisismanta/pessimist/-/pessimist-1.2.0.tgz#303b4da06a3894db4b97311cf25f54d5ca6c128c"
-  integrity sha512-rm8/zjNMuO9hPYhEMavVIIxmvawJJB8mthvbVXd74XUW7V/SbgmtDBQjICbCWKjluvA+gh+cqi7dv85/jexknA==
-  dependencies:
-    lodash "^4.17.21"
-
 "@types/estree@^1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.6.tgz#628effeeae2064a1b4e79f78e81d87b7e5fc7b50"
@@ -444,14 +437,6 @@ escape-string-regexp@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
-
-eslint-plugin-local@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-local/-/eslint-plugin-local-6.0.0.tgz#5f2f203b88ea7b14708040d6724df26935f8ac8e"
-  integrity sha512-pvy/pTTyanEKAqpYqy/SLfd4TdiAQ/yFO+GRXDGvGQa2vEUGtmlEjmWQXBDGSk790j4nrAB/7ipqPQY3nLduDg==
-  dependencies:
-    "@thisismanta/pessimist" "^1.2.0"
-    chalk "^4.0.0"
 
 eslint-plugin-vue@^9.31.0:
   version "9.31.0"
