@@ -1,168 +1,121 @@
-require('@rushstack/eslint-patch/modern-module-resolution');
+import globals from 'globals';
+import eslint from '@eslint/js';
+import vueLint from 'eslint-plugin-vue';
+import stylistic from '@stylistic/eslint-plugin';
+import local from 'eslint-plugin-local';
+import tseslint from 'typescript-eslint';
 
-module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended-type-checked',
-    'plugin:@typescript-eslint/stylistic-type-checked',
-    'plugin:vue/vue3-recommended',
-    'plugin:jsonc/recommended-with-jsonc',
-  ],
-  plugins: ['@typescript-eslint', '@stylistic', 'eslint-plugin-local-rules'],
-  parser: 'vue-eslint-parser',
-  parserOptions: {
-    parser: '@typescript-eslint/parser',
-    extraFileExtensions: ['.vue', '.json'],
-  },
-  env: {
-    browser: true,
-    node: true,
-  },
-  rules: {
-    indent: 'off',
-    '@stylistic/indent': [
-        'error',
-        4,
-        {
-            SwitchCase: 1,
-            ignoredNodes: ['ConditionalExpression'],
-        },
-    ],
-    'vue/html-indent': [
-        'error',
-        4,
-        {
-            attribute: 1,
-            baseIndent: 1,
-            closeBracket: 0,
-            alignAttributesVertically: true,
-            ignores: [],
-        },
-    ],
-    'jsonc/indent': [
-        'error',
-        4,
-        {
-            SwitchCase: 1,
-            ignoredNodes: ['ConditionalExpression'],
-        },
-    ],
-    'vue/script-indent': [
-        'error',
-        4,
-        {
-            baseIndent: 0,
-            switchCase: 1,
-            ignores: [],
-        },
-    ],
-    'vue/max-attributes-per-line': [
-        'error',
-        {
-            singleline: 3,
-            multiline: 1,
-        },
-    ],
-    'vue/html-self-closing': [
-        'error',
-        {
-            html: {
-                void: 'never',
-                normal: 'always',
-                component: 'always',
+export default tseslint.config(
+    { plugins: { local } },
+
+    // config parsers
+    {
+        files: ['*.vue', '**/*.vue', '*.ts', '**/*.ts'],
+        languageOptions: {
+            parserOptions: {
+                parser: tseslint.parser,
+                sourceType: 'module',
+                projectService: true,
+                tsconfigRootDir: import.meta.dirname,
+                extraFileExtensions: ['.vue'],
             },
-            svg: 'always',
-            math: 'always',
         },
-    ],
-    'no-undef': 'off',
-    'vue/multi-word-component-names': 'off',
-    quotes: ['error', 'single'],
-    'quote-props': ['error', 'as-needed'],
-    'comma-style': ['error', 'last'],
-    'semi-style': ['error', 'last'],
-    semi: [2, 'always'],
-    '@typescript-eslint/semi': ['error', 'always'],
-    'comma-dangle': ['error', 'always-multiline'],
-    'brace-style': ['error', '1tbs'],
-    'eol-last': ['error', 'always'],
-    'vue/no-multiple-template-root': 'off',
-    'space-before-blocks': 'error',
-    'no-multi-spaces': 'error',
-    'keyword-spacing': 'error',
-    'key-spacing': ['error', { afterColon: true }],
-    'arrow-parens': ['error', 'as-needed'],
-    'vue/no-v-html': 'off',
-    'vue/no-unused-components': 'off',
-    'vue/no-mutating-props': 'off',
-    'vue/one-component-per-file': 'off',
-    'object-curly-newline': ['error', {
-        ObjectExpression: {
-            multiline: true,
-            minProperties: 3,
-        },
-        ObjectPattern: { multiline: true },
-        ImportDeclaration: {
-            multiline: true,
-            minProperties: 3,
-        },
-        ExportDeclaration: {
-            multiline: true,
-            minProperties: 3,
-        },
-    }],
-    'object-curly-spacing': ['error', 'always'],
-    'vue/object-curly-spacing': ['error', 'always'],
-    '@stylistic/object-curly-spacing': ['error', 'always'],
-    'object-property-newline': 'error',
-    'object-shorthand': 'error',
-    'vue/singleline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
-    'vue/multiline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
-    'vue/require-default-prop': 'warn',
-    'no-prototype-builtins': 'off',
-    'prefer-const': 'error',
-    'space-infix-ops': ['error', { int32Hint: false }],
-    'no-useless-escape': 'off',
-    'comma-spacing': ['error', {
-        before: false,
-        after: true, 
-    }],
-    '@typescript-eslint/no-this-alias': [
-        'error',
-        {
-            allowDestructuring: true,
-            allowedNames: ['self'],
-        },
-    ],
-    '@stylistic/member-delimiter-style': 'error',
-    '@typescript-eslint/no-unused-vars': 'error',
-    'vue/no-useless-v-bind': 'error',
-    'vue/no-unused-refs': 'error',
-    'vue/require-typed-ref': 'error',
-    '@typescript-eslint/consistent-type-imports': 'error',
-    'no-extra-parens': 'error',
-    'arrow-body-style': ['error', 'as-needed'],
-    '@typescript-eslint/no-misused-promises': [
-        'error',
-        { checksVoidReturn: false },
-    ],
-    '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
-    '@stylistic/type-annotation-spacing': 'error',
-  },
-  overrides: [
-    {
-        files: ['*.vue'],
-        rules: { indent: 'off' },
     },
+
+    // config envs
     {
-        files: ['*.js', '*.json', '*.json5', '*.jsonc'],
-        extends: [
-            'plugin:@typescript-eslint/disable-type-checked',
-        ],
+        languageOptions: {
+            globals: {
+                ...globals.browser,
+                ...globals.node,
+            },
+        },
     },
+
+    // syntax rules
+    eslint.configs.recommended,
+    ...tseslint.configs.recommendedTypeChecked,
+    ...vueLint.configs['flat/recommended'],
+    
+    // code style rules
+    stylistic.configs['disable-legacy'],
+    stylistic.configs.customize({
+        indent: 4,
+        quotes: 'single',
+        semi: true,
+        commaDangle: 'always-multiline',
+        braceStyle: '1tbs',
+    }),
+
     {
-        files: ['components/**/*.vue'],
         rules: {
+            'vue/multi-word-component-names': 'off',
+            'vue/html-indent': [
+                'error',
+                4,
+                {
+                    attribute: 1,
+                    baseIndent: 1,
+                    closeBracket: 0,
+                    alignAttributesVertically: true,
+                    ignores: [],
+                },
+            ],
+            'vue/max-attributes-per-line': [
+                'error',
+                {
+                    singleline: 3,
+                    multiline: 1,
+                },
+            ],
+            '@stylistic/arrow-parens': ['error', 'as-needed'],
+            '@typescript-eslint/no-unused-expressions': 'off',
+            'object-curly-newline': ['error', {
+                ObjectExpression: {
+                    multiline: true,
+                    minProperties: 3,
+                },
+                ObjectPattern: { multiline: true },
+                ImportDeclaration: {
+                    multiline: true,
+                    minProperties: 3,
+                },
+                ExportDeclaration: {
+                    multiline: true,
+                    minProperties: 3,
+                },
+            }],
+            'object-property-newline': 'error',
+            'object-shorthand': 'error',
+            'vue/singleline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
+            'vue/multiline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
+            'prefer-const': 'error',
+            '@typescript-eslint/consistent-type-imports': 'error',
+            'arrow-body-style': 'error',
+            'no-useless-escape': 'off',
+            'vue/no-v-html': 'off',
+            '@typescript-eslint/no-misused-promises': [
+                'error',
+                { checksVoidReturn: false },
+            ],
+            'local/prefer-true-attribute-shorthand': ['error', 'always'],
+            'local/add-vue-extension': 'error',
+            'local/use-shortest-alias': 'error',
+            'local/import-entities-by-column-or-line': ['error', { minProperties: 3 }],
+            'local/import-right-order': 'off',
+        },
+    },
+
+    // overrides rules
+    {
+        files: ['**/*.{js,mjs,json,json5,jsonc,vue}'],
+        extends: [tseslint.configs.disableTypeChecked],
+    },
+
+    {
+        files: ['*.vue', '**/*.vue'],
+        rules: {
+            'indent': 'off',
             'vue/match-component-file-name': [
                 'error',
                 {
@@ -172,10 +125,14 @@ module.exports = {
             ],
         },
     },
+
     {
-        files: ['*.json', '*.json5', '*.jsonc'],
-        parser: 'jsonc-eslint-parser',
-        rules: { 'jsonc/comma-dangle': 'error' },
+        files: ['**/*.{json,json5,jsonc}'],
+        rules: {
+            '@stylistic/quote-props': 'off',
+            '@stylistic/quotes': 'off',
+            '@stylistic/comma-dangle': ['error', 'never'],
+            '@stylistic/semi': ['error', 'never'],
+        },
     },
-  ],
-};
+);
