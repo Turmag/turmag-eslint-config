@@ -121,7 +121,7 @@ export default tseslint.config(
     {
         files: ['**/*.{json,json5,jsonc}'],
         rules: {
-            '@stylistic/quote-props': 'off',
+            '@stylistic/quote-props': ['error', 'always'],
             '@stylistic/quotes': 'off',
             '@stylistic/comma-dangle': ['error', 'never'],
             '@stylistic/semi': ['error', 'never'],
