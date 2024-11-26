@@ -8,8 +8,12 @@
   "license": "MIT",
   "keywords": [
     "eslint",
+    "linter",
     "config",
-    "example"
+    "typescript",
+    "eslint-config",
+    "stylistic",
+    "json"
   ],
   "files": [
     "index.js"
