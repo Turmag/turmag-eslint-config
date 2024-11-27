@@ -46,6 +46,35 @@ export default tseslint.config(
 
     {
         rules: {
+            'no-extra-parens': 'error',
+            'object-curly-newline': ['error', {
+                ObjectExpression: {
+                    multiline: true,
+                    minProperties: 3,
+                },
+                ObjectPattern: { multiline: true },
+                ImportDeclaration: {
+                    multiline: true,
+                    minProperties: 3,
+                },
+                ExportDeclaration: {
+                    multiline: true,
+                    minProperties: 3,
+                },
+            }],
+            'object-property-newline': 'error',
+            'object-shorthand': 'error',
+            'prefer-const': 'error',
+            'arrow-body-style': 'error',
+            'no-useless-escape': 'off',
+            '@stylistic/arrow-parens': ['error', 'as-needed'],
+            '@typescript-eslint/no-unused-expressions': 'off',
+            '@typescript-eslint/consistent-type-imports': 'error',
+            '@typescript-eslint/no-misused-promises': [
+                'error',
+                { checksVoidReturn: false },
+            ],
+            'vue/no-v-html': 'off',
             'vue/multi-word-component-names': 'off',
             'vue/html-indent': [
                 'error',
@@ -65,36 +94,8 @@ export default tseslint.config(
                     multiline: 1,
                 },
             ],
-            '@stylistic/arrow-parens': ['error', 'as-needed'],
-            '@typescript-eslint/no-unused-expressions': 'off',
-            'object-curly-newline': ['error', {
-                ObjectExpression: {
-                    multiline: true,
-                    minProperties: 3,
-                },
-                ObjectPattern: { multiline: true },
-                ImportDeclaration: {
-                    multiline: true,
-                    minProperties: 3,
-                },
-                ExportDeclaration: {
-                    multiline: true,
-                    minProperties: 3,
-                },
-            }],
-            'object-property-newline': 'error',
-            'object-shorthand': 'error',
             'vue/singleline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
             'vue/multiline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
-            'prefer-const': 'error',
-            '@typescript-eslint/consistent-type-imports': 'error',
-            'arrow-body-style': 'error',
-            'no-useless-escape': 'off',
-            'vue/no-v-html': 'off',
-            '@typescript-eslint/no-misused-promises': [
-                'error',
-                { checksVoidReturn: false },
-            ],
         },
     },
 
