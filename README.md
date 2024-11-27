@@ -5,11 +5,11 @@ Turmag's reusable eslint-config
 # Languages
 #### Web #
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): [@stylistic](https://eslint.style) + [eslint](https://eslint.org)
-* TypeScript: [@typescript-eslint](https://typescript-eslint.io) + [@stylistic](https://eslint.style) + [eslint](https://eslint.org)
-* Vue: [@typescript-eslint](https://typescript-eslint.io) + [@stylistic](https://eslint.style) + [eslint](https://eslint.org) + [vueLint](https://eslint.vuejs.org)
+* [TypeScript](https://www.typescriptlang.org): [@typescript-eslint](https://typescript-eslint.io) + [@stylistic](https://eslint.style) + [eslint](https://eslint.org)
+* [Vue](https://vuejs.org): [@typescript-eslint](https://typescript-eslint.io) + [@stylistic](https://eslint.style) + [eslint](https://eslint.org) + [vueLint](https://eslint.vuejs.org)
 
 #### Data #
-* JSON & JSONC: [eslint](https://eslint.org)
+* [JSON](https://json.org) & [JSONC](https://code.visualstudio.com/docs/languages/json#_json-with-comments): [eslint](https://eslint.org)
 
 # Features
 **Zero-Dependency**<br>
@@ -27,12 +27,12 @@ npm i -D eslint@^9.15 turmag-eslint-config
 ```
 yarn add -D eslint@^9.15 turmag-eslint-config
 ```
-2. Create eslint.config.js in your project root.
-3. In eslint.config.js:
-* Import config  turmag-eslint-config
+2. Create `eslint.config.js` in your project root.
+3. In `eslint.config.js`:
+* Import config from turmag-eslint-config
 
 ```
-import config from 'turmag-eslint-config';
+import config from `'turmag-eslint-config'`;
 ```
 * Use this config with your optional rules:
 
