@@ -68,6 +68,7 @@ export default tseslint.config(
             'arrow-body-style': 'error',
             'no-useless-escape': 'off',
             '@stylistic/arrow-parens': ['error', 'as-needed'],
+            '@stylistic/no-mixed-operators': 'off',
             '@typescript-eslint/no-unused-expressions': 'off',
             '@typescript-eslint/consistent-type-imports': 'error',
             '@typescript-eslint/no-misused-promises': [
