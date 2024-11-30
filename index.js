@@ -2,7 +2,7 @@ import globals from 'globals';
 import eslint from '@eslint/js';
 import vueLint from 'eslint-plugin-vue';
 import stylistic from '@stylistic/eslint-plugin';
-import tseslint, { type Config }  from 'typescript-eslint';
+import tseslint from 'typescript-eslint';
 
 export default [
     // config parsers
@@ -13,6 +13,7 @@ export default [
                 parser: tseslint.parser,
                 sourceType: 'module',
                 projectService: true,
+                tsconfigRootDir: import.meta.dirname,
                 extraFileExtensions: ['.vue'],
             },
         },
@@ -100,7 +101,7 @@ export default [
     },
 
     // overrides rules
-    tseslint.config(
+    ...tseslint.config(
         {
             files: ['**/*.{js,mjs,json,json5,jsonc,vue}'],
             extends: [tseslint.configs.disableTypeChecked],
@@ -130,4 +131,4 @@ export default [
             '@stylistic/semi': ['error', 'never'],
         },
     },
-] as Config[];
+];

@@ -1,32 +1,39 @@
 {
-  "name": "turmag-eslint-config",
-  "main": "index.js",
-  "version": "2.0.10",
-  "type": "module",
-  "description": "turmag's reusable eslint-config",
-  "author": "Pavel Vinogradov",
-  "license": "MIT",
-  "keywords": [
-    "eslint",
-    "linter",
-    "config",
-    "typescript",
-    "vue",
-    "eslint-config",
-    "stylistic",
-    "json"
-  ],
-  "files": [
-    "index.js"
-  ],
-  "repository": "https://github.com/Turmag/turmag-eslint-config.git",
-  "homepage": "https://github.com/Turmag/turmag-eslint-config",
-  "dependencies": {
-    "@stylistic/eslint-plugin": "^2.11.0",
-    "@typescript-eslint/eslint-plugin": "^7.3.1",
-    "@typescript-eslint/parser": "^7.3.1",
-    "eslint": "^9.16.0",
-    "eslint-plugin-vue": "^9.31.0",
-    "typescript-eslint": "^8.15.0"
-  }
+    "name": "turmag-eslint-config",
+    "main": "index.js",
+    "version": "2.0.11",
+    "type": "module",
+    "description": "turmag's reusable eslint-config",
+    "author": "Pavel Vinogradov",
+    "license": "MIT",
+    "keywords": [
+        "eslint",
+        "linter",
+        "config",
+        "typescript",
+        "vue",
+        "eslint-config",
+        "stylistic",
+        "json"
+    ],
+    "files": [
+        "index.js"
+    ],
+    "repository": "https://github.com/Turmag/turmag-eslint-config.git",
+    "homepage": "https://github.com/Turmag/turmag-eslint-config",
+    "dependencies": {
+        "@stylistic/eslint-plugin": "^2.11.0",
+        "@typescript-eslint/eslint-plugin": "^7.3.1",
+        "@typescript-eslint/parser": "^7.3.1",
+        "eslint": "^9.16.0",
+        "eslint-plugin-vue": "^9.31.0",
+        "typescript": "^5.7.2",
+        "typescript-eslint": "^8.15.0"
+    },
+    "devDependencies": {
+        "@types/node": "^22.10.1",
+        "jiti": "^2.4.1"
+    },
+    "peerDependencies": { "eslint": ">=9.14.0" },
+    "publishConfig": { "access": "public" }
 }
