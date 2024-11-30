@@ -13,7 +13,7 @@ Turmag's reusable eslint-config
 
 # Features
 **Zero-Dependency**<br>
-No need to install 3 plugins and 2 parsers: each language's latest plugin is bundled and configured.
+No need to install 3 plugins and 3 parsers: each language's latest plugin is bundled and configured.
 
 **Zero-Config**<br>
 No need to remember each plugin's parserOptions;
