@@ -1,7 +1,7 @@
 {
     "name": "turmag-eslint-config",
     "main": "index.js",
-    "version": "2.0.12",
+    "version": "2.0.13",
     "type": "module",
     "description": "turmag's reusable eslint-config",
     "author": "Pavel Vinogradov",

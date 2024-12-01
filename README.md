@@ -18,7 +18,7 @@ No need to install 3 plugins and 3 parsers: each language's latest plugin is bun
 **Zero-Config**<br>
 No need to remember each plugin's parserOptions;
 
-# Install
+# Installation
 1. You'll first need to install [ESLint](https://eslint.org):
 ```
 npm i eslint@^9.15 --save-dev
@@ -43,7 +43,9 @@ pnpm add turmag-eslint-config --save-dev
 ```
 
 3. Create `eslint.config.js` in your project root.
-4. In `eslint.config.js`:
+
+# Usage
+In `eslint.config.js`:
 * Import config from turmag-eslint-config
 
 ```
@@ -66,3 +68,6 @@ export default [
     },
 ];
 ```
+
+# License
+This code is licensed under the [MIT](https://github.com/Turmag/turmag-eslint-config/blob/main/LICENSE) License.
