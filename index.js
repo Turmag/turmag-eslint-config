@@ -66,7 +66,6 @@ export default [
             'object-shorthand': 'error',
             'prefer-const': 'error',
             'arrow-body-style': 'error',
-            'no-useless-escape': 'off',
             '@stylistic/arrow-parens': ['error', 'as-needed'],
             '@stylistic/no-mixed-operators': 'off',
             '@typescript-eslint/no-unused-expressions': 'off',

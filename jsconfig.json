@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "ES6",
+        "target": "ESNext",
         "module": "ESNext",
         "moduleResolution": "Node",
         "resolveJsonModule": true,
@@ -12,6 +12,6 @@
         "noImplicitThis": true,
         "skipLibCheck": true
     },
-    "include": [".eslint.config.js"],
+    "include": ["eslint.config.js"],
     "exclude": ["node_modules"]
 }
