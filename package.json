@@ -3,7 +3,7 @@
     "main": "index.js",
     "version": "2.0.14",
     "type": "module",
-    "description": "turmag's reusable eslint-config",
+    "description": "Turmag's reusable eslint-config",
     "author": "Pavel Vinogradov",
     "license": "MIT",
     "keywords": [
