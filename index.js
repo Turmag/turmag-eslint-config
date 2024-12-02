@@ -3,8 +3,12 @@ import eslint from '@eslint/js';
 import vueLint from 'eslint-plugin-vue';
 import stylistic from '@stylistic/eslint-plugin';
 import tseslint from 'typescript-eslint';
+import specialRules from 'eslint-plugin-turmag-special-rules';
 
 export default [
+    // plugins
+    { plugins: { 'special-rules': specialRules } },
+
     // config parsers
     {
         files: ['*.vue', '**/*.vue', '*.ts', '**/*.ts'],
@@ -96,6 +100,8 @@ export default [
             ],
             'vue/singleline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
             'vue/multiline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
+            'special-rules/prefer-true-attribute-shorthand': 'error',
+            'special-rules/import-entities-by-column-or-line': ['error', { minProperties: 3 }],
         },
     },
 
