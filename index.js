@@ -46,6 +46,7 @@ export default [
         semi: true,
         commaDangle: 'always-multiline',
         braceStyle: '1tbs',
+        jsx: false,
     }),
 
     {
