@@ -79,6 +79,24 @@ export default [
                 'error',
                 { checksVoidReturn: false },
             ],
+            '@typescript-eslint/naming-convention': [
+                'error',
+                {
+                    selector: 'interface',
+                    format: ['PascalCase'],
+                    prefix: ['I'],
+                },
+                {
+                    selector: 'typeParameter',
+                    format: ['PascalCase'],
+                    prefix: ['T'],
+                },
+                {
+                    selector: 'typeLike',
+                    format: ['PascalCase'],
+                    prefix: ['T'],
+                },
+            ],
             'vue/no-v-html': 'off',
             'vue/multi-word-component-names': 'off',
             'vue/html-indent': [
