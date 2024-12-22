@@ -127,7 +127,12 @@ export default [
             'vue/multiline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
             'unicorn/prefer-includes': 'error',
             'unicorn/prefer-spread': 'error',
-            'unicorn/prevent-abbreviations': 'error',
+            'unicorn/prevent-abbreviations': ['error', {
+                replacements: {
+                    props: false,
+                    params: false,
+                },
+            }],
             'special-rules/prefer-true-attribute-shorthand': 'error',
             'special-rules/import-entities-by-column-or-line': ['error', { minProperties: 3 }],
         },
