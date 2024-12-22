@@ -4,6 +4,7 @@ import vueLint from 'eslint-plugin-vue';
 import stylistic from '@stylistic/eslint-plugin';
 import tseslint from 'typescript-eslint';
 import unicorn from 'eslint-plugin-unicorn';
+import importRules from 'eslint-plugin-import';
 import specialRules from 'eslint-plugin-turmag-special-rules';
 
 export default [
@@ -11,6 +12,7 @@ export default [
     {
         plugins: {
             unicorn,
+            'import': importRules,
             'special-rules': specialRules,
         },
     },
@@ -134,6 +136,7 @@ export default [
                     params: false,
                 },
             }],
+            'import/no-duplicates': 'error',
             'special-rules/prefer-true-attribute-shorthand': 'error',
             'special-rules/import-entities-by-column-or-line': ['error', { minProperties: 3 }],
         },
