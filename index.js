@@ -105,6 +105,27 @@ export default [
                     format: ['PascalCase'],
                     prefix: ['T'],
                 },
+                {
+                    selector: 'enum',
+                    format: ['PascalCase'],
+                },
+                {
+                    selector: 'enumMember',
+                    format: ['PascalCase'],
+                },
+                {
+                    selector: 'variable',
+                    format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+                },
+                {
+                    selector: 'variable',
+                    types: ['boolean'],
+                    format: ['camelCase', 'UPPER_CASE'],
+                    custom: {
+                        regex: '^(is|has|disabled|required|loading)[a-zA-Z_]*',
+                        match: true,
+                    },
+                },
             ],
             'vue/no-v-html': 'off',
             'vue/multi-word-component-names': 'off',
