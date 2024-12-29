@@ -59,7 +59,10 @@ export default [
 
     {
         rules: {
+            'arrow-body-style': 'error',
+            'no-extra-semi': 'error',
             'no-extra-parens': 'error',
+            'no-unneeded-ternary': 'error',
             'object-curly-newline': ['error', {
                 ObjectExpression: {
                     multiline: true,
@@ -78,8 +81,7 @@ export default [
             'object-property-newline': 'error',
             'object-shorthand': 'error',
             'prefer-const': 'error',
-            'arrow-body-style': 'error',
-            'no-unneeded-ternary': 'error',
+            'prefer-template': 'error',
             '@stylistic/arrow-parens': ['error', 'as-needed'],
             '@stylistic/no-mixed-operators': 'off',
             '@typescript-eslint/no-unused-expressions': 'off',
@@ -154,6 +156,7 @@ export default [
             'unicorn/prevent-abbreviations': ['error', {
                 replacements: {
                     props: false,
+                    param: false,
                     params: false,
                 },
             }],
