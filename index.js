@@ -183,7 +183,7 @@ export default [
                     value: {
                         vue: ['^vue$'],
                         component: ['.vue$', 'icons$'],
-                        composable: ['composable', 'use'],
+                        composable: ['composable'],
                         store: ['store'],
                         constant: ['constant'],
                         method: ['helper', 'utils'],
