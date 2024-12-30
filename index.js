@@ -1,12 +1,12 @@
-import globals from 'globals';
 import eslint from '@eslint/js';
-import vueLint from 'eslint-plugin-vue';
 import stylistic from '@stylistic/eslint-plugin';
-import tseslint from 'typescript-eslint';
-import unicorn from 'eslint-plugin-unicorn';
 import importRules from 'eslint-plugin-import';
 import perfectionist from 'eslint-plugin-perfectionist';
 import specialRules from 'eslint-plugin-turmag-special-rules';
+import unicorn from 'eslint-plugin-unicorn';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
+import vueLint from 'eslint-plugin-vue';
 
 export default [
     // plugins
@@ -166,6 +166,7 @@ export default [
             'import/newline-after-import': 'error',
             'perfectionist/sort-imports': ['error', {
                 groups: [
+                    'side-effect-style',
                     'unknown',
                     ['builtin', 'external'],
                     'vue',
@@ -180,7 +181,7 @@ export default [
                 ],
                 customGroups: {
                     value: {
-                        vue: ['^vue$', '^vue-.+'],
+                        vue: ['^vue$', 'icons$'],
                         component: ['.vue$'],
                         composable: ['composable', 'use'],
                         store: ['store'],
@@ -188,7 +189,7 @@ export default [
                         method: ['helper', 'utils'],
                         api: ['api'],
                     },
-                    type: { vue: ['^vue$', '^vue-.+'] },
+                    type: { vue: ['^vue$'] },
                 },
                 newlinesBetween: 'never',
             }],
