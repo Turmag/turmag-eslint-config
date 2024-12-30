@@ -193,6 +193,10 @@ export default [
                 },
                 newlinesBetween: 'never',
             }],
+            'perfectionist/sort-named-imports': 'error',
+            'perfectionist/sort-interfaces': 'error',
+            'perfectionist/sort-object-types': 'error',
+            'perfectionist/sort-objects': 'error',
             'special-rules/prefer-true-attribute-shorthand': 'error',
             'special-rules/import-entities-by-column-or-line': ['error', { minProperties: 3 }],
         },
@@ -228,5 +232,10 @@ export default [
             '@stylistic/comma-dangle': ['error', 'never'],
             '@stylistic/semi': ['error', 'never'],
         },
+    },
+
+    {
+        files: ['eslint*', 'stylelint*', 'package.json', '*config.(json|js|ts)'],
+        rules: { 'perfectionist/sort-objects': 'off' },
     },
 ];
