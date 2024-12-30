@@ -5,6 +5,7 @@ import stylistic from '@stylistic/eslint-plugin';
 import tseslint from 'typescript-eslint';
 import unicorn from 'eslint-plugin-unicorn';
 import importRules from 'eslint-plugin-import';
+import perfectionist from 'eslint-plugin-perfectionist';
 import specialRules from 'eslint-plugin-turmag-special-rules';
 
 export default [
@@ -13,6 +14,7 @@ export default [
         plugins: {
             unicorn,
             'import': importRules,
+            perfectionist,
             'special-rules': specialRules,
         },
     },
@@ -161,6 +163,35 @@ export default [
                 },
             }],
             'import/no-duplicates': 'error',
+            'import/newline-after-import': 'error',
+            'perfectionist/sort-imports': ['error', {
+                groups: [
+                    'unknown',
+                    ['builtin', 'external'],
+                    'vue',
+                    'component',
+                    'composable',
+                    'store',
+                    'type',
+                    'constant',
+                    'method',
+                    'api',
+                    ['parent', 'sibling', 'index'],
+                ],
+                customGroups: {
+                    value: {
+                        vue: ['^vue$', '^vue-.+'],
+                        component: ['.vue$'],
+                        composable: ['composable', 'use'],
+                        store: ['store'],
+                        constant: ['constant'],
+                        method: ['helper', 'utils'],
+                        api: ['api'],
+                    },
+                    type: { vue: ['^vue$', '^vue-.+'] },
+                },
+                newlinesBetween: 'never',
+            }],
             'special-rules/prefer-true-attribute-shorthand': 'error',
             'special-rules/import-entities-by-column-or-line': ['error', { minProperties: 3 }],
         },
