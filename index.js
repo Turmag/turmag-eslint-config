@@ -187,7 +187,7 @@ export default [
                         store: ['(s|S)tore'],
                         constant: ['(c|C)onstant'],
                         method: ['(h|H)elper', '(u|U)tils'],
-                        api: ['api'],
+                        api: ['(a|A)pi'],
                     },
                     type: { vue: ['^vue$'] },
                 },
