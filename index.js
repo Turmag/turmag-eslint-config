@@ -2,6 +2,7 @@ import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import importRules from 'eslint-plugin-import';
 import perfectionist from 'eslint-plugin-perfectionist';
+import sonarjs from 'eslint-plugin-sonarjs';
 import specialRules from 'eslint-plugin-turmag-special-rules';
 import unicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
@@ -15,6 +16,7 @@ export default [
             unicorn,
             'import': importRules,
             perfectionist,
+            sonarjs,
             'special-rules': specialRules,
         },
     },
@@ -198,6 +200,12 @@ export default [
             'perfectionist/sort-interfaces': 'error',
             'perfectionist/sort-object-types': 'error',
             'perfectionist/sort-objects': 'error',
+            'sonarjs/no-duplicate-string': 'error',
+            'sonarjs/no-inverted-boolean-check': 'error',
+            'sonarjs/no-misleading-array-reverse': 'error',
+            'sonarjs/prefer-immediate-return': 'error',
+            'sonarjs/prefer-single-boolean-return': 'error',
+            'sonarjs/reduce-initial-value': 'error',
             'special-rules/prefer-true-attribute-shorthand': 'error',
             'special-rules/import-entities-by-column-or-line': ['error', { minProperties: 3 }],
         },
