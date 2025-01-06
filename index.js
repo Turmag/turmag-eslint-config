@@ -200,7 +200,6 @@ export default [
             'perfectionist/sort-interfaces': 'error',
             'perfectionist/sort-object-types': 'error',
             'perfectionist/sort-objects': 'error',
-            'sonarjs/no-duplicate-string': 'error',
             'sonarjs/no-inverted-boolean-check': 'error',
             'sonarjs/no-misleading-array-reverse': 'error',
             'sonarjs/prefer-immediate-return': 'error',
