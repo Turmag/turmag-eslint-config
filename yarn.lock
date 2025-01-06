@@ -1806,10 +1806,12 @@ eslint-plugin-sonarjs@^3.0.1:
     semver "7.6.3"
     typescript "^5"
 
-eslint-plugin-turmag-special-rules@^1.0.18:
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-turmag-special-rules/-/eslint-plugin-turmag-special-rules-1.0.18.tgz#63caa0f2162d6ff5359e97d34ed707664331320c"
-  integrity sha512-Y4n/ivPfnqTo2ph9QSGe0cRP0zTEhMYj/jOJY0nbYB7Rnrn3hg7Mqnz9uhLwVcZj4czGdsgDiMQxFdg7Ruj6EQ==
+eslint-plugin-turmag-special-rules@^1.0.19:
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-turmag-special-rules/-/eslint-plugin-turmag-special-rules-1.0.19.tgz#a6318d8189708b6d9f89ad9f9c643bdaacbae5ee"
+  integrity sha512-mTOQ3+JFVb3g3ZJEf6dG/EIXBcHQOuMze858AiczfvSB8QlT7ee0iQh1/iWw2Tuiz4uZKR0c77aXlorCEwsBhg==
+  dependencies:
+    requireindex "^1.2.0"
 
 eslint-plugin-unicorn@^56.0.1:
   version "56.0.1"
@@ -2978,6 +2980,11 @@ regjsparser@^0.12.0:
   integrity sha512-cnE+y8bz4NhMjISKbgeVJtqNbtf5QpjZP+Bslo+UqkIt9QPnX9q095eiRRASJG1/tz6dlNr6Z5NsBiWYokp6EQ==
   dependencies:
     jsesc "~3.0.2"
+
+requireindex@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/requireindex/-/requireindex-1.2.0.tgz#3463cdb22ee151902635aa6c9535d4de9c2ef1ef"
+  integrity sha512-L9jEkOi3ASd9PYit2cwRfyppc9NoABujTP8/5gFcbERmo5jUoAKovIC3fsF17pkTnGsrByysqX+Kxd2OTNI1ww==
 
 resolve-from@^4.0.0:
   version "4.0.0"
