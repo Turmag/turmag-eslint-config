@@ -160,7 +160,7 @@ export default [
             'vue/multi-word-component-names': 'off',
             'vue/multiline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
             'vue/singleline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
-            'vue/object-curly-spacing': 'error',
+            'vue/object-curly-spacing': ['error', 'always'],
             'vue/prefer-template': 'error',
             'vue/require-typed-ref': 'error',
             'unicorn/prefer-includes': 'error',
