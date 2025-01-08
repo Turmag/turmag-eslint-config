@@ -134,8 +134,7 @@ export default [
                     },
                 },
             ],
-            'vue/no-v-html': 'off',
-            'vue/multi-word-component-names': 'off',
+            'vue/custom-event-name-casing': ['error', 'kebab-case'],
             'vue/html-indent': [
                 'error',
                 4,
@@ -147,6 +146,10 @@ export default [
                     ignores: [],
                 },
             ],
+            'vue/no-extra-parens': 'error',
+            'vue/no-unused-refs': 'error',
+            'vue/no-useless-v-bind': 'error',
+            'vue/no-v-html': 'off',
             'vue/max-attributes-per-line': [
                 'error',
                 {
@@ -154,8 +157,12 @@ export default [
                     multiline: 1,
                 },
             ],
-            'vue/singleline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
+            'vue/multi-word-component-names': 'off',
             'vue/multiline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
+            'vue/singleline-html-element-content-newline': ['warn', { ignores: ['pre', 'textarea'] }],
+            'vue/object-curly-spacing': 'error',
+            'vue/prefer-template': 'error',
+            'vue/require-typed-ref': 'error',
             'unicorn/prefer-includes': 'error',
             'unicorn/prefer-spread': 'error',
             'unicorn/prevent-abbreviations': ['error', {
@@ -169,6 +176,7 @@ export default [
             'import/newline-after-import': 'error',
             'perfectionist/sort-imports': ['error', {
                 groups: [
+                    ['parent', 'sibling', 'index'],
                     'side-effect-style',
                     'unknown',
                     ['builtin', 'external'],
@@ -180,7 +188,6 @@ export default [
                     'constant',
                     'method',
                     'api',
-                    ['parent', 'sibling', 'index'],
                 ],
                 customGroups: {
                     value: {
