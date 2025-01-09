@@ -14,7 +14,7 @@ export default [
     {
         plugins: {
             unicorn,
-            'import': importRules,
+            import: importRules,
             perfectionist,
             sonarjs,
             'special-rules': specialRules,
@@ -55,6 +55,7 @@ export default [
     stylistic.configs.customize({
         indent: 4,
         quotes: 'single',
+        quoteProps: 'as-needed',
         semi: true,
         commaDangle: 'always-multiline',
         braceStyle: '1tbs',
@@ -170,7 +171,10 @@ export default [
                     props: false,
                     param: false,
                     params: false,
+                    i: false,
+                    j: false,
                 },
+                allowList: { columnDef: true },
             }],
             'import/no-duplicates': 'error',
             'import/newline-after-import': 'error',
@@ -228,7 +232,7 @@ export default [
     {
         files: ['*.vue', '**/*.vue'],
         rules: {
-            'indent': 'off',
+            indent: 'off',
             'vue/match-component-file-name': [
                 'error',
                 {
