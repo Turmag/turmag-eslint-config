@@ -151,6 +151,7 @@ export default [
             'vue/no-unused-refs': 'error',
             'vue/no-useless-v-bind': 'error',
             'vue/no-v-html': 'off',
+            'vue/padding-line-between-blocks': 'error',
             'vue/max-attributes-per-line': [
                 'error',
                 {
