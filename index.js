@@ -65,6 +65,7 @@ export default [
     {
         rules: {
             'arrow-body-style': 'error',
+            eqeqeq: 'error',
             'no-extra-semi': 'error',
             'no-extra-parens': 'error',
             'no-unneeded-ternary': 'error',
@@ -168,14 +169,26 @@ export default [
             'unicorn/prefer-includes': 'error',
             'unicorn/prefer-spread': 'error',
             'unicorn/prevent-abbreviations': ['error', {
+                extendDefaultReplacements: false,
                 replacements: {
-                    props: false,
-                    param: false,
-                    params: false,
-                    i: false,
-                    j: false,
+                    btn: { button: true },
+                    e: {
+                        error: true,
+                        event: true,
+                    },
+                    el: { element: true },
+                    elem: { element: true },
+                    elems: { elements: true },
+                    err: { error: true },
+                    res: {
+                        resource: true,
+                        response: true,
+                        result: true,
+                    },
+                    retval: { returnValue: true },
+                    val: { value: true },
+                    ver: { version: true },
                 },
-                allowList: { columnDef: true },
             }],
             'import/no-duplicates': 'error',
             'import/newline-after-import': 'error',
