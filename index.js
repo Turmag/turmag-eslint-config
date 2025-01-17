@@ -238,10 +238,15 @@ export default [
     // overrides rules
     ...tseslint.config(
         {
-            files: ['**/*.{js,mjs,json,json5,jsonc,vue}'],
+            files: ['**/*.{js,mjs,cjs,json,json5,jsonc,vue}'],
             extends: [tseslint.configs.disableTypeChecked],
         },
     ),
+
+    {
+        files: ['**/*.cjs'],
+        rules: { '@typescript-eslint/no-require-imports': 'off' },
+    },
 
     {
         files: ['*.vue', '**/*.vue'],
