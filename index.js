@@ -273,7 +273,7 @@ export default [
     },
 
     {
-        files: ['eslint*', 'stylelint*', 'package.json', '*config.(json|js|ts)', '*/**/*store*', '*/**/router*', '*/**/*.json*'],
+        files: ['eslint*', 'stylelint*', 'package.json', '*config.js*', '*config.ts', '*/**/*store*', '*/**/router*', '*/**/*.json*'],
         rules: { 'perfectionist/sort-objects': 'off' },
     },
 ];
