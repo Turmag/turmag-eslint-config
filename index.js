@@ -89,6 +89,7 @@ export default [
             'prefer-const': 'error',
             'prefer-template': 'error',
             'require-await': 'error',
+            'dot-notation': 'error',
             '@stylistic/arrow-parens': ['error', 'as-needed'],
             '@stylistic/no-mixed-operators': 'off',
             '@typescript-eslint/no-unused-expressions': 'off',
