@@ -93,7 +93,7 @@ export default [
             '@stylistic/arrow-parens': ['error', 'as-needed'],
             '@stylistic/no-mixed-operators': 'off',
             '@typescript-eslint/no-unused-expressions': 'off',
-            '@typescript-eslint/consistent-type-imports': 'error',
+            '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
             '@typescript-eslint/no-misused-promises': [
                 'error',
                 { checksVoidReturn: false },
