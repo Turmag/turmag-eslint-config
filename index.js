@@ -1,5 +1,6 @@
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
+import stylisticTs from '@stylistic/eslint-plugin-ts';
 import importRules from 'eslint-plugin-import';
 import perfectionist from 'eslint-plugin-perfectionist';
 import sonarjs from 'eslint-plugin-sonarjs';
@@ -13,6 +14,7 @@ export default [
     // plugins
     {
         plugins: {
+            '@stylistic/ts': stylisticTs,
             unicorn,
             import: importRules,
             perfectionist,
@@ -92,6 +94,14 @@ export default [
             'dot-notation': 'error',
             '@stylistic/arrow-parens': ['error', 'as-needed'],
             '@stylistic/no-mixed-operators': 'off',
+            '@stylistic/ts/padding-line-between-statements': [
+                'error',
+                {
+                    blankLine: 'always',
+                    prev: '*',
+                    next: ['enum', 'interface', 'type', 'export'],
+                },
+            ],
             '@typescript-eslint/no-unused-expressions': 'off',
             '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
             '@typescript-eslint/no-misused-promises': [
