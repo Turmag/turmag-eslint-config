@@ -103,7 +103,7 @@ export default [
                 },
             ],
             '@typescript-eslint/no-unused-expressions': 'off',
-            '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
+            '@typescript-eslint/consistent-type-imports': 'error',
             '@typescript-eslint/no-misused-promises': [
                 'error',
                 { checksVoidReturn: false },
