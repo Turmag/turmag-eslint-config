@@ -98,7 +98,7 @@ export default [
                 'error',
                 {
                     blankLine: 'always',
-                    prev: '*',
+                    prev: ['enum', 'interface', 'type'],
                     next: ['enum', 'interface', 'type', 'export'],
                 },
             ],
