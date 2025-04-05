@@ -221,7 +221,7 @@ export default [
                 customGroups: {
                     value: {
                         vue: ['^vue$'],
-                        component: ['.vue$', 'icons$'],
+                        component: ['.vue$', 'icons$', 'kit$'],
                         composable: ['(c|C)omposable'],
                         store: ['(s|S)tore'],
                         constant: ['(c|C)onstant'],
