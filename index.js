@@ -243,6 +243,7 @@ export default [
             'sonarjs/reduce-initial-value': 'error',
             'special-rules/prefer-true-attribute-shorthand': 'error',
             'special-rules/import-entities-by-column-or-line': ['error', { minProperties: 3 }],
+            'special-rules/variable-entities-by-column-or-line': ['error', { minProperties: 3 }],
         },
     },
 
