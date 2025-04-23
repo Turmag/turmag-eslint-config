@@ -177,6 +177,7 @@ export default [
             'vue/object-curly-spacing': ['error', 'always'],
             'vue/prefer-template': 'error',
             'vue/require-typed-ref': 'error',
+            'vue/space-infix-ops': ['error', { int32Hint: false }],
             'unicorn/prefer-includes': 'error',
             'unicorn/prefer-spread': 'error',
             'unicorn/prevent-abbreviations': ['error', {
