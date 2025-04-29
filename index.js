@@ -251,7 +251,7 @@ export default [
     // overrides rules
     ...tseslint.config(
         {
-            files: ['**/*.{js,mjs,cjs,json,json5,jsonc,vue}'],
+            files: ['**/*.{js,mjs,cjs,json,json5,jsonc}'],
             extends: [tseslint.configs.disableTypeChecked],
         },
     ),
