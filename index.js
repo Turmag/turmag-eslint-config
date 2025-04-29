@@ -272,6 +272,7 @@ export default [
                     shouldMatchCase: false,
                 },
             ],
+            '@typescript-eslint/no-floating-promises': 'off',
         },
     },
 
