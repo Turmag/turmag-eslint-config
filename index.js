@@ -92,6 +92,7 @@ export default [
             'prefer-template': 'error',
             'require-await': 'error',
             'dot-notation': 'error',
+            'no-negated-condition': 'error',
             '@stylistic/arrow-parens': ['error', 'as-needed'],
             '@stylistic/no-mixed-operators': 'off',
             '@stylistic/ts/padding-line-between-statements': [
