@@ -127,6 +127,10 @@ export default [
                     prefix: ['T'],
                 },
                 {
+                    selector: 'class',
+                    format: ['PascalCase'],
+                },
+                {
                     selector: 'enum',
                     format: ['PascalCase'],
                 },
