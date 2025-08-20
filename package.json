@@ -1,7 +1,7 @@
 {
     "name": "turmag-eslint-config",
     "main": "index.js",
-    "version": "2.0.65",
+    "version": "2.0.66",
     "type": "module",
     "description": "Turmag's reusable eslint-config",
     "author": "Pavel Vinogradov",
@@ -27,7 +27,7 @@
         "eslint-plugin-import": "^2.31.0",
         "eslint-plugin-perfectionist": "^4.4.0",
         "eslint-plugin-sonarjs": "^3.0.1",
-        "eslint-plugin-turmag-special-rules": "^1.0.25",
+        "eslint-plugin-turmag-special-rules": "^1.0.26",
         "eslint-plugin-unicorn": "^56.0.1",
         "eslint-plugin-vue": "^9.32.0",
         "globals": "^15.14.0",
