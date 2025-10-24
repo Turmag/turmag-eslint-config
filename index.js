@@ -1,6 +1,5 @@
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import stylisticTs from '@stylistic/eslint-plugin-ts';
 import importRules from 'eslint-plugin-import';
 import pluginOxlint from 'eslint-plugin-oxlint';
 import perfectionist from 'eslint-plugin-perfectionist';
@@ -15,7 +14,6 @@ export default [
     // plugins
     {
         plugins: {
-            '@stylistic/ts': stylisticTs,
             unicorn,
             import: importRules,
             perfectionist,
@@ -97,7 +95,7 @@ export default [
             'no-negated-condition': 'error',
             '@stylistic/arrow-parens': ['error', 'as-needed'],
             '@stylistic/no-mixed-operators': 'off',
-            '@stylistic/ts/padding-line-between-statements': [
+            '@stylistic/padding-line-between-statements': [
                 'error',
                 {
                     blankLine: 'always',
