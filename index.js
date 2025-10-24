@@ -2,6 +2,7 @@ import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import stylisticTs from '@stylistic/eslint-plugin-ts';
 import importRules from 'eslint-plugin-import';
+import pluginOxlint from 'eslint-plugin-oxlint';
 import perfectionist from 'eslint-plugin-perfectionist';
 import sonarjs from 'eslint-plugin-sonarjs';
 import specialRules from 'eslint-plugin-turmag-special-rules';
@@ -51,6 +52,7 @@ export default [
     eslint.configs.recommended,
     ...tseslint.configs.recommendedTypeChecked,
     ...vueLint.configs['flat/recommended'],
+    ...pluginOxlint.configs['flat/recommended'],
 
     // code style rules
     stylistic.configs['disable-legacy'],
