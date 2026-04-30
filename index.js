@@ -143,7 +143,7 @@ export default [
                     format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
                 },
                 {
-                    selector: 'variable',
+                    selector: ['variable', 'parameter'],
                     types: ['boolean'],
                     format: ['camelCase', 'UPPER_CASE'],
                     custom: {
@@ -209,6 +209,7 @@ export default [
             }],
             'import/no-duplicates': ['error', { 'prefer-inline': true }],
             'import/newline-after-import': 'error',
+            'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
             'perfectionist/sort-imports': ['error', {
                 groups: [
                     ['parent', 'sibling', 'index'],
@@ -250,6 +251,7 @@ export default [
             'special-rules/prefer-true-attribute-shorthand': 'error',
             'special-rules/import-entities-by-column-or-line': ['error', { minProperties: 3 }],
             'special-rules/variable-entities-by-column-or-line': ['error', { minProperties: 3 }],
+            'special-rules/vue-remove-script-indents': 'error',
         },
     },
 

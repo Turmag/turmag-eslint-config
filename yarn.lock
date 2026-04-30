@@ -844,10 +844,10 @@ eslint-plugin-sonarjs@^3.0.1:
     semver "7.7.4"
     typescript ">=5"
 
-eslint-plugin-turmag-special-rules@^1.0.37:
-  version "1.0.37"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-turmag-special-rules/-/eslint-plugin-turmag-special-rules-1.0.37.tgz#b77a8eef38a1013d801d2dbd790489c552d3f5c0"
-  integrity sha512-kR9wUHncBZcikvNA56v0dooN7ZPBR25PeM7M2XTe7zSr9I/Toe79tSx0opL650r448rt7VSkOvtjRyif1rNKgg==
+eslint-plugin-turmag-special-rules@^1.0.39:
+  version "1.0.39"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-turmag-special-rules/-/eslint-plugin-turmag-special-rules-1.0.39.tgz#19f42e02d28cf98822546418779e289891b7f38c"
+  integrity sha512-DFPn1rNklKXQDNqYdpsPsT+wPc0L/WS8cmOUHump0+YzlFcUMmwKTGdUmmxptQfZbDO7HWwQIQuV8Ktop3XMNA==
 
 eslint-plugin-unicorn@^56.0.1:
   version "56.0.1"
