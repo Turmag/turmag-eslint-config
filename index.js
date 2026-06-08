@@ -99,8 +99,8 @@ export default [
                 'error',
                 {
                     blankLine: 'always',
-                    prev: ['enum', 'interface', 'type'],
-                    next: ['enum', 'interface', 'type', 'export'],
+                    prev: ['enum', 'interface'],
+                    next: ['enum', 'interface', 'export'],
                 },
             ],
             '@typescript-eslint/no-unused-expressions': 'off',
