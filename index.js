@@ -209,7 +209,8 @@ export default [
             }],
             'import/no-duplicates': ['error', { 'prefer-inline': true }],
             'import/newline-after-import': 'error',
-            'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
+            // TODO: Нужно найти альтернативу, чтоб не уходить в конфликт с правилом import/no-duplicates
+            // 'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
             'perfectionist/sort-imports': ['error', {
                 groups: [
                     ['parent', 'sibling', 'index'],
